@@ -25,121 +25,45 @@ function ready() {
         input.addEventListener('click', quantityChanged2)
     }
 
-
     // redirect when button is clicked
     document.getElementById('mc-embedded-subscribe').addEventListener('click', validateEmail)
-    
-
-
-
-    // // Adding product as text on bottom of form 
-    // var addToCartButtons = document.getElementsByClassName('cart-quantity-input')
-    // for (var i = 0; i < quantityInputs.length; i++) {
-    //     var input = quantityInputs[i]
-    //     input.addEventListener('change', addToCartClicked)
-    //     // button.addEventListener('click', addToCartClicked)
-    // }
-
-   
     
 }
 
 
 
-// ------------------ TESTING
-
-
-// function addToCartClicked(event) {
-//     var button = event.target
-//     var shopItem = button.parentElement.parentElement
-//     var title = shopItem.getElementsByClassName('shop-item-title')[0].innerText
-//     var price = shopItem.getElementsByClassName('shop-item-price')[0].innerText
-//     var imageSrc = shopItem.getElementsByClassName('shop-item-image')[0].src
-//     addItemToCart(title, price, imageSrc)
-//     updateCartTotal()
-// }
-
-
-// //Adding items to Cart
-// function addItemToCart(title, price, imageSrc) {
-//     var cartRow = document.createElement('div')
-//     cartRow.classList.add('cart-row')
-//     var cartItems = document.getElementsByClassName('cart-items')[0]
-//     var cartItemNames = cartItems.getElementsByClassName('cart-item-title')
-//     for (var i = 0; i < cartItemNames.length; i++) {
-//         if (cartItemNames[i].innerText == title) {
-//             alert('This item is already added to the cart')
-//             return
-//         }
-//     }
-//     var cartRowContents = `
-//         <div class="cart-item cart-column">
-//             <img class="cart-item-image" src="${imageSrc}" width="100" height="100">
-//             <span class="cart-item-title">€{title}</span>
-//         </div>
-//         <span class="cart-price cart-column">${price}</span>
-//         <div class="cart-quantity cart-column">
-//             <input class="cart-quantity-input" type="number" value="1">
-//             <button class="btn btn-danger" type="button">REMOVE</button>
-//         </div>
-
-//             <hr class="my-4">
-//             <div class="d-flex justify-content-between mb-5">
-//                 <h5 class="text-uppercase">Total price</h5>
-//                 <h5 class="cart-total-price2">€0.00</h5>
-//             </div>
-//             <hr class="my-4">
-//         `
-//     cartRow.innerHTML = cartRowContents
-//     cartItems.append(cartRow)
-//     cartRow.getElementsByClassName('btn-danger')[0].addEventListener('click', removeCartItem)
-//     cartRow.getElementsByClassName('cart-quantity-input')[0].addEventListener('change', quantityChanged)
-// }
-
-
-
-
 
 function validateEmail() {
-    var emailID = document.getElementById('entry.1270148595').value;
+    var emailID = document.getElementById('entry.1293249477').value;
     atpos = emailID.indexOf("@");
     dotpos = emailID.lastIndexOf(".");
     
     if (atpos < 1 || ( dotpos - atpos < 2 )) {
        alert("Please enter correct email ID")
-       document.getElementById('entry.1270148595').focus() ;
+       document.getElementById('entry.1293249477').focus() ;
        return false;
     }
-    var Name = document.getElementById('entry.2039904732').value;
-    var Phone = document.getElementById('entry.802012483').value;
-    var Address = document.getElementById('entry.2044404204').value;
+    var Name = document.getElementById('entry.1788447504').value;
+    var Phone = document.getElementById('entry.2050546389').value;
+    var Address = document.getElementById('entry.669891675').value;
     if (String(Name) < 1 || String(Phone) < 1 || String(Address) < 1) {
         alert("Missing or incorrect input")
-        document.getElementById('entry.2039904732').focus() ;
+        document.getElementById('entry.1293249477').focus() ;
         return false;
      }
     // return(true);
     return(true , setTimeout(redirect,1000) );
-    // return(true , iframedisplay(), redirect() );
+    
  }
 
-// setTimeout(myFunction, 2000);
+
 function redirect()
     {
         location.href = "thankyou.html";
-        
-        // var url = "index.html";
-        // window.location(url);
     }
 
 
-// function purchaseClicked2() {
-//     if (validateEmail2()) {
-//         console.log(22)
-//     } 
-//     }
 
-// ------------------ TESTING
 
 
 
@@ -177,14 +101,12 @@ function quantityChanged2(event) {
 function shipOption() {
     var ship = document.getElementsByClassName('ship-input2')[0].value
     if ( ship= 1) {
-    document.getElementById('entry.1048430269').value = String("standard post")
+    document.getElementById('entry.1589933044').value = String("standard post")
     }
     if (ship = 2) {
-        document.getElementById('entry.1048430269').value = String("Create own UPS label")
+        document.getElementById('entry.1589933044').value = String("Create own UPS label")
         }
-
     }  
-
 
 
 function updateCartTotal2() {
@@ -215,40 +137,40 @@ function updateCartTotal2() {
     // console.log("product 1 input", quantityElement.value)
 
     // C0501nor value
-    document.getElementById('entry.86856500').value = String(quantityElement.value)
+    document.getElementById('entry.495249817').value = String(quantityElement.value)
     // C0502bs value
-    document.getElementById('entry.935907669').value = String(document.getElementsByClassName('product-quantity-input')[1].value)
+    document.getElementById('entry.1621419680').value = String(document.getElementsByClassName('product-quantity-input')[1].value)
     // C1001nor value
-    document.getElementById('entry.1537239891').value = String(document.getElementsByClassName('product-quantity-input')[2].value)
+    document.getElementById('entry.70028523').value = String(document.getElementsByClassName('product-quantity-input')[2].value)
     // C1002bs value
-    document.getElementById('entry.57361277').value = String(document.getElementsByClassName('product-quantity-input')[3].value)
+    document.getElementById('entry.1245892219').value = String(document.getElementsByClassName('product-quantity-input')[3].value)
     // C2001 value
-    document.getElementById('entry.868617270').value = String(document.getElementsByClassName('product-quantity-input')[4].value)
+    document.getElementById('entry.923915066').value = String(document.getElementsByClassName('product-quantity-input')[4].value)
     // O503 value
-    document.getElementById('entry.655648236').value = String(document.getElementsByClassName('product-quantity-input')[5].value)
+    document.getElementById('entry.1574564014').value = String(document.getElementsByClassName('product-quantity-input')[5].value)
     // A603 value
-    document.getElementById('entry.1501222362').value = String(document.getElementsByClassName('product-quantity-input')[6].value)
+    document.getElementById('entry.604639497').value = String(document.getElementsByClassName('product-quantity-input')[6].value)
     // C5001 value
-    document.getElementById('entry.189018723').value = String(document.getElementsByClassName('product-quantity-input')[7].value)
+    document.getElementById('entry.2114677339').value = String(document.getElementsByClassName('product-quantity-input')[7].value)
     // 1101m value
-    document.getElementById('entry.364445465').value = String(document.getElementsByClassName('product-quantity-input')[8].value)
+    document.getElementById('entry.1995822072').value = String(document.getElementsByClassName('product-quantity-input')[8].value)
     // 1133 value
-    document.getElementById('entry.612034025').value = String(document.getElementsByClassName('product-quantity-input')[9].value)
+    document.getElementById('entry.1873245535').value = String(document.getElementsByClassName('product-quantity-input')[9].value)
     // 1133-3x value
-    document.getElementById('entry.1025061278').value = String(document.getElementsByClassName('product-quantity-input')[10].value)
+    document.getElementById('entry.1878445071').value = String(document.getElementsByClassName('product-quantity-input')[10].value)
     // 1133-6x value
-    document.getElementById('entry.1772857745').value = String(document.getElementsByClassName('product-quantity-input')[11].value)
+    document.getElementById('entry.10921528').value = String(document.getElementsByClassName('product-quantity-input')[11].value)
     // 1101rat value
-    document.getElementById('entry.273665196').value = String(document.getElementsByClassName('product-quantity-input')[12].value)
+    document.getElementById('entry.1298925332').value = String(document.getElementsByClassName('product-quantity-input')[12].value)
     // 1133rat value
-    document.getElementById('entry.1752811353').value = String(document.getElementsByClassName('product-quantity-input')[13].value)
+    document.getElementById('entry.1823852726').value = String(document.getElementsByClassName('product-quantity-input')[13].value)
     // 1133rat-3x value
-    document.getElementById('entry.2023322996').value = String(document.getElementsByClassName('product-quantity-input')[14].value)
+    document.getElementById('entry.61341585').value = String(document.getElementsByClassName('product-quantity-input')[14].value)
     // 1133rat-6x value
-    document.getElementById('entry.1351909614').value = String(document.getElementsByClassName('product-quantity-input')[15].value)
+    document.getElementById('entry.39888874').value = String(document.getElementsByClassName('product-quantity-input')[15].value)
     
     // Total value
-    document.getElementById('entry.1321278235').value = String(total2)
+    document.getElementById('entry.431486396').value = String(total2)
     
     // Shipping option
     shipOption()
