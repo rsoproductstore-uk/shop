@@ -56,13 +56,40 @@ function validateEmail() {
     
  }
 
+ function redirect()
+ {
+     location.href = "thankyou.html";
+ }
 
-function redirect()
-    {
-        location.href = "thankyou.html";
+//  Contact page validation
+ function validateEmail2() {
+    var emailID = document.getElementById('entry.1293249477').value;
+    atpos = emailID.indexOf("@");
+    dotpos = emailID.lastIndexOf(".");
+    
+    if (atpos < 1 || ( dotpos - atpos < 2 )) {
+       alert("Please enter correct email ID")
+       document.getElementById('entry.1293249477').focus() ;
+       return false;
     }
+    var Name = document.getElementById('entry.1788447504').value;
+    if (String(Name) < 1 || String(Phone) < 1 || String(Address) < 1) {
+        alert("Missing or incorrect input")
+        document.getElementById('entry.1293249477').focus() ;
+        return false;
+     }
+    // return(true);
+    return(true , setTimeout(redirect2,1000) );
+    
+ }
 
 
+ function redirect2()
+ {
+     location.href = "thankyoumessage.html";
+ }
+
+    
 
 
 
