@@ -27,6 +27,8 @@ function ready() {
 
     // redirect when button is clicked
     document.getElementById('mc-embedded-subscribe').addEventListener('click', validateEmail)
+
+    document.getElementById('mc-embedded-subscribe').addEventListener('click', validateEmail2)
     
 }
 
