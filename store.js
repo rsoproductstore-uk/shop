@@ -26,7 +26,6 @@ function ready() {
     }
 
     // redirect when button is clicked
-    // redirect when button is clicked
     var orderbut =  document.getElementById('mc-embedded-subscribe')
     if (typeof(element) != 'undefined' && element != null)
     {
@@ -39,6 +38,8 @@ function ready() {
     {
         orderbut.addEventListener('click', validateEmail2);
     }
+
+
 }
 
 
@@ -73,7 +74,7 @@ function validateEmail() {
  }
 
 //  Contact page validation
- function validateEmail2() {
+function validateEmail2() {
     var emailID = document.getElementById('entry.1293249477').value;
     atpos = emailID.indexOf("@");
     dotpos = emailID.lastIndexOf(".");
@@ -207,6 +208,9 @@ function updateCartTotal2() {
     // 1133rat-6x value
     document.getElementById('entry.39888874').value = String(document.getElementsByClassName('product-quantity-input')[15].value)
     
+    // websitename
+    document.getElementById('entry.1101495060').value = String('rsoproductstore-uk.github.io/shop/')
+
     // Total value
     document.getElementById('entry.431486396').value = String(total2)
     
